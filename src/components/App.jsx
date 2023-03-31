@@ -1,7 +1,7 @@
 import { Component } from 'react';
-import { Wrap } from './Wrap/Wrap';
-import { ContactForm } from './ContactForm/ContactForm';
-import { Contacts } from './Contacts/Contacts';
+import { Wrap } from 'components/Wrap/Wrap';
+import { ContactForm } from 'components/ContactForm/ContactForm';
+import { Contacts } from 'components/Contacts/Contacts';
 
 export class App extends Component {
   state = {

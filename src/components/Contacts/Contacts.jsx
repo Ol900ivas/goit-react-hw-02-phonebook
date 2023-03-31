@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import { ContactItem } from '../ContactItem/ContactItem';
+import { ContactItem } from 'components/ContactItem/ContactItem';
 import { TitleH2 } from './Contacts.styled';
 
 export const Contacts = ({ contacts }) => {
