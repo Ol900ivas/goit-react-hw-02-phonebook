@@ -32,6 +32,19 @@ export class ContactForm extends Component {
     this.reset();
   };
 
+  // handleSubmit = evt => {
+  //   evt.preventDefault();
+  //   const contact = {
+  //     name: this.state.name,
+  //     number: this.state.number,
+  //   };
+  //   const { getFormData } = this.props;
+  //   console.log('getFormData :>> ', getFormData);
+
+  //   this.props.getFormData(contact);
+  //   this.reset();
+  // };
+
   reset = () => {
     this.setState({ name: '', number: '' });
   };

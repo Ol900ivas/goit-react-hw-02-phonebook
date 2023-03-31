@@ -33,7 +33,7 @@ export const FormBtn = styled.button`
   display: block;
   font-size: 1em;
   padding: 10px;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   border-radius: 8px;
   border: 1px solid #59b969;
   box-shadow: 0 1px 0 0 #60bd49 inset;
