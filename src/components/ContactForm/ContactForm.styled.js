@@ -35,4 +35,7 @@ export const FormBtn = styled.button`
   :hover {
     background-image: linear-gradient(to bottom, #51db1c, #6ba061);
   }
+  :disabled {
+    background: #82cf78c2;
+  }
 `;

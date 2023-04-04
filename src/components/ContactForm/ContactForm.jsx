@@ -61,7 +61,12 @@ export class ContactForm extends Component {
           />
         </InputWrap>
 
-        <FormBtn type="submit">Add contact</FormBtn>
+        <FormBtn
+          type="submit"
+          disabled={!this.state.name || !this.state.number}
+        >
+          Add contact
+        </FormBtn>
       </form>
     );
   }
