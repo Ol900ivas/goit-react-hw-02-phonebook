@@ -11,3 +11,15 @@ export const GeneralWrap = styled.div`
   background-color: #f0f0f0;
   box-shadow: 0 0 20px 0 #000000;
 `;
+
+export const TitleH1 = styled.h1`
+  margin: 0 15px 20px;
+  border-bottom: 2px solid #72b372;
+  padding: 5px 10px 5px 0;
+`;
+
+export const TitleH2 = styled.h2`
+  margin: 0 15px 20px;
+  border-bottom: 2px solid #72b372;
+  padding: 5px 10px 5px 0;
+`;

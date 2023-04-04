@@ -1,11 +1,5 @@
 import styled from '@emotion/styled';
 
-export const TitleH1 = styled.h1`
-  margin: 0 15px 20px;
-  border-bottom: 2px solid #72b372;
-  padding: 5px 10px 5px 0;
-`;
-
 export const InputWrap = styled.div`
   margin: 0 0 15px 0;
   border: none;

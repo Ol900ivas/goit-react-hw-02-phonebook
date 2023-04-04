@@ -2,19 +2,11 @@ import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
 
 import { Component } from 'react';
-import {
-  TitleH1,
-  InputWrap,
-  Label,
-  Input,
-  FormBtn,
-} from './ContactForm.styled';
+import { InputWrap, Label, Input, FormBtn } from './ContactForm.styled';
 
 export class ContactForm extends Component {
   state = {
-    // contacts: [],
     name: '',
-    // filter: '',
     number: '',
   };
 
@@ -32,19 +24,6 @@ export class ContactForm extends Component {
     this.reset();
   };
 
-  // handleSubmit = evt => {
-  //   evt.preventDefault();
-  //   const contact = {
-  //     name: this.state.name,
-  //     number: this.state.number,
-  //   };
-  //   const { getFormData } = this.props;
-  //   console.log('getFormData :>> ', getFormData);
-
-  //   this.props.getFormData(contact);
-  //   this.reset();
-  // };
-
   reset = () => {
     this.setState({ name: '', number: '' });
   };
@@ -52,7 +31,6 @@ export class ContactForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <TitleH1>Phonebook</TitleH1>
         <InputWrap>
           <Label htmlFor={this.nameInputId}>Name</Label>
           <Input
@@ -60,7 +38,7 @@ export class ContactForm extends Component {
             name="name"
             id={this.nameInputId}
             value={this.state.name}
-            // placeholder="Shridhar Deshmukh"
+            placeholder="Sergiy Petrenco"
             onChange={this.handleChange}
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
@@ -74,7 +52,7 @@ export class ContactForm extends Component {
             name="number"
             id={this.numberInputId}
             value={this.state.number}
-            // placeholder="123-45-67"
+            placeholder="123-45-67"
             onChange={this.handleChange}
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
@@ -87,3 +65,7 @@ export class ContactForm extends Component {
     );
   }
 }
+
+ContactForm.propTypes = {
+  submit: PropTypes.func.isRequired,
+};

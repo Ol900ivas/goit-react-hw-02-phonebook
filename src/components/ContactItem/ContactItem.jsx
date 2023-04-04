@@ -1,15 +1,24 @@
 import PropTypes from 'prop-types';
 import { RxCross2 } from 'react-icons/rx';
 
-export const ContactItem = ({ contact }) => {
+import { Li, Button } from './ContactItem.styled';
+
+export const ContactItem = ({ id, name, number, onDeleteContact }) => {
   return (
-    <li>
+    <Li key={id}>
       <p>
-        {contact.name}: {contact.number}
-        <button>
-          <RxCross2 size="20px" />
-        </button>
+        {name}: {number}
       </p>
-    </li>
+      <Button onClick={() => onDeleteContact(id)}>
+        <RxCross2 size="20px" />
+      </Button>
+    </Li>
   );
+};
+
+ContactItem.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+  onDeleteContact: PropTypes.func.isRequired,
 };
