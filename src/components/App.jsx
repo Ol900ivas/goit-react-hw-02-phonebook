@@ -44,15 +44,6 @@ export class App extends Component {
     }));
   };
 
-  // getData = data => {
-
-  //   const dataIncludes = this.state.contacts.find(
-  //     contact => contact.name.toLowerCase() === data.name.toLowerCase()
-  //   );
-  //   if (dataIncludes) {
-  //     return alert(`${data.name} is already in contacts`);
-  //   }
-
   changeFilter = e => {
     this.setState({ filter: e.currentTarget.value });
   };
