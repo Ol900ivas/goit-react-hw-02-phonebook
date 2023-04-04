@@ -20,6 +20,13 @@ export class App extends Component {
 
   addContact = data => {
     console.log(data);
+    const dataIncludes = this.state.contacts.find(
+      contact => contact.name.toLowerCase() === data.name.toLowerCase()
+    );
+    if (dataIncludes) {
+      return alert(`${data.name} is already in contacts`);
+    }
+
     const newContact = {
       id: nanoid(),
       name: data.name,
@@ -36,6 +43,15 @@ export class App extends Component {
       contacts: contacts.filter(contact => contact.id !== contactId),
     }));
   };
+
+  // getData = data => {
+
+  //   const dataIncludes = this.state.contacts.find(
+  //     contact => contact.name.toLowerCase() === data.name.toLowerCase()
+  //   );
+  //   if (dataIncludes) {
+  //     return alert(`${data.name} is already in contacts`);
+  //   }
 
   changeFilter = e => {
     this.setState({ filter: e.currentTarget.value });
